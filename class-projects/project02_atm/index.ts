@@ -1,20 +1,30 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
 
-let currentBalance: number = 10000; // $ Dollar
-let currentPin: number = 1234;
+// let currentBalance: number = 10000; // $ Dollar
+// let currentPin: number = 1234;
 
-let answer = await inquirer.prompt([
+let credentials = await inquirer.prompt([
   {
     name: "pin",
-    message: "Enter Your Pin Number:",
-    type: "number",
+    message: "Enter Pin Number:",
+    type: "number"
+  },
+  {
+    name: "balance",
+    message: "Enter Amount:",
+    type: "number"
   },
 ]);
 
-// console.log(answer); // return object { pin: 1234 }
 
+// console.log(credentials); // return object { pin: 1234, balance: 1000 }
 
-if (answer.pin === currentPin) {
+let currentPin: number = credentials.pin;
+let currentBalance: number = credentials.balance;
+
+if (credentials.pin === currentPin) {
   console.log("Login Successful!");
   let operationAnswer = await inquirer.prompt([
     {
@@ -54,7 +64,7 @@ if (answer.pin === currentPin) {
           name: "cash",
           message: "Select Amount:",
           type: "list",
-          choices: [1000, 5000, 10000, 20000]
+          choices: [1500, 5000, 15000, 25000, 450000]
         },
       ]);
       if (selectAnswer.cash <= currentBalance) {
