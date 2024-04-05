@@ -74,6 +74,8 @@ if (age>=0 && age<13) {
 /* Q#6
 Enter a month (as a number between 1 and 12). Print the number of days in that month. Assume a non-leap year. */
 let month: number = 9;
+
+// Method 1
 switch (month) {
     case 1:
         console.log("January has 31 Days.")
@@ -116,6 +118,16 @@ switch (month) {
         break;
 }
 
+// Method 2
+// if (month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12){
+//     console.log("This Month has 31 Days.");
+// } else if (month === 2){
+//     console.log("This Month has 28 Days.");  
+// } else if (month === 4 || month === 6 || month === 9 || month === 11){
+//     console.log("This Month has 30 Days.");
+// } else{
+//     console.log("Enter Valid Month [1-12]");
+// }
 
 /* Q#7
 Check if a year is a leap year or not. */
