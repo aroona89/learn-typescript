@@ -3,4 +3,4 @@ This somewhat complex TypeScript/Node.js project is a console-based application.
 ### Logic Building 
 * user will SignUP using PIN Number and balance.
 * then select option appears, offering withdraw and current balance.
-* on clicking withdraw, user has to select one of two modes by entering amount or fast cash.
+* on clicking withdraw, user has to select one of two modes of transaction either by entering amount or fast cash.
