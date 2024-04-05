@@ -38,7 +38,7 @@ if (credentials.pin === currentPin) {
     let withdrawAnswer = await inquirer.prompt([
       {
         name: "operation",
-        message: "Select Option:",
+        message: "Select Your Transaction Method:",
         type: "list",
         choices: ["Enter Amount", "Fast Cash"]
       },
