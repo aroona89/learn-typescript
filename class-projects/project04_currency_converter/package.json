@@ -1,7 +1,7 @@
 {
-  "name": "aroona-todo-app",
+  "name": "aroona-cli-currency-converter",
   "version": "1.0.0",
-  "description": "Develop a simple command line Todo app using  [TypeScipt](https://www.typescriptlang.org/), [Node.js](https://nodejs.org/en/) and [Inquirer](https://www.npmjs.com/package/inquirer)",
+  "description": "",
   "main": "index.js",
   "type": "module",
   "bin": "index.js",

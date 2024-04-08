@@ -1,7 +1,7 @@
 #! /usr/bin/env node 
 import inquirer from "inquirer";
 import chalk from "chalk";
-console.log(chalk.bgYellowBright("Welcome to To-do App!"));
+console.log(chalk.yellowBright.bold("Welcome to To-do App!"));
 let todoList = [];
 let condition = true;
 let nextId = 1;
@@ -28,13 +28,13 @@ while (condition) {
             }
             break;
         case "View Task":
-            console.log(chalk.bgWhiteBright("Tasks List:"));
+            console.log(chalk.bgGrey.bold("Tasks List:"));
             if (todoList.length === 0) {
                 console.log(chalk.redBright("No tasks available to View!"));
             }
             else {
                 todoList.forEach((task, index) => {
-                    console.log(`${index + 1}- ${task.description}`);
+                    console.log(chalk.whiteBright.bold(`${index + 1}- ${task.description}`));
                 });
             }
             break;
