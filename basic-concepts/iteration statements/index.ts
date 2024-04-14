@@ -21,3 +21,38 @@ for (let index = 10; index >=1 ; --index) {
 means run the code written in {} i.e execution of code block and then do increment or decrement (prefix, postfix) */
 
 // do while loop
+let num: number = 1;
+do {
+    console.log("do while loop", num);
+    ++num;
+} while(num<=10)
+
+// use-cases
+
+/* write a typescript program that calculates the sum of even numbers from 1 to 100
+and make the list of all even numbers to print along with the sum. */
+
+let sumEven = 0;
+let evenNumbersList: number[] = [];
+for (let index = 1; index <= 100; index++) {
+    if (index % 2 == 0){
+        evenNumbersList.push(index);
+        sumEven = sumEven + index;
+    }
+} 
+console.log("list of even numbers:", evenNumbersList);
+console.log("sum of even numbers:", sumEven);
+
+/* write a typescript program that calculates the sum of odd numbers from 1 to 100
+and make the list of all even numbers to print along with the sum. */
+
+let sumOdd = 0;
+let oddNumbersList: number[] = [];
+for (let index = 1; index <= 100; index++) {
+    if (index % 2 != 0){
+        oddNumbersList.push(index);
+        sumOdd = sumOdd + index;
+    }
+} 
+console.log("list of odd numbers:", oddNumbersList);
+console.log("sum of odd numbers:", sumOdd);
