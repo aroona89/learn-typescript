@@ -10,7 +10,7 @@ if (numberEvenOdd % 2 == 0) {
 /* Q#2
 Using conditional statements, check if the number is: Positive, Negative, or Zero. */
 let numberPositiveNegative: number = -89;
-if (numberEvenOdd > 0) {
+if (numberPositiveNegative > 0) {
     console.log(`${numberPositiveNegative} is Positive.`);
 } else if (numberPositiveNegative < 0) {
     console.log(`${numberPositiveNegative} is Negative.`);  

@@ -32,9 +32,9 @@ let fahrenheitToCelsius = 5 / 9 * (fahrenheitTemperature - 32);
 console.log(`${fahrenheitTemperature} Fahrenheit in Celsius: ${fahrenheitToCelsius}`);
 // Q#5(ii) Celsius to Fahrenheit
 let celsiusTemperature = 32;
-let celsiusToFahrenheit = (9 / 5 * fahrenheitTemperature) + 32;
+let celsiusToFahrenheit = (9 / 5 * celsiusTemperature) + 32;
 // BODMAS is an acronym for Brackets, Orders or Exponents, Division, Multiplication, Addition, Subtraction.
-console.log(`${celsiusTemperature} Fahrenheit in Celsius: ${celsiusToFahrenheit}`);
+console.log(`${celsiusTemperature} Celsius in Fahrenheit: ${celsiusToFahrenheit}`);
 /* Q#6
 Convert a given number of seconds into minutes and seconds using variables. */
 // Q#6(i) Seconds into Minutes
@@ -57,21 +57,29 @@ let a = 2; // 3 pre-increment
 let b = ++a * 2; // 3 * 2 
 console.log("b:", b); // 6
 console.log("a:", a); // 3
+/* Note: pre-increment (++variable) operator first modify the variable by adding 1,
+then use the updated value in the mathematical expression for computation.*/
 // Q#2
 let x = 5; // 4 post-decrement
 let y = x-- + 2; // 5 + 2
 console.log("y:", y); // 7
 console.log("x", x); // 4
+/* Note: post-decrement (variable--) operator use the current value of the variable for computation,
+then update the value of a variable by decreasing 1 from it. */
 // Q#3
 let q = 3; // 4 (pre-increment), 5 (post-increment), 6 (pre-increment)
 let z = ++q + q++ + ++q; // 4 + 4 + 6 
 console.log("z", z); // 14
 console.log("q:", q); // 6
+/* Note: post-increment (variable++) operator use the current value of the variable for computation,
+then update the value of a variable by adding 1 into it. */
 // Q#4
 let m = 2; // 3 (pre-increment), 4 (post-increment), 3 (pre-decrement)
 let n = ++m * m++ * --m; // 3 * 3 * 3
 console.log("n", n); // 27
 console.log("m", m); // 3
+/* Note: pre-decrement (--variable) operator first modify the variable by subtracting 1 from it,
+then use the updated value in the mathematical expression for computation. */
 // Q#5
 let f = 3; // 4 (pre-increment), 5 (post-increment)
 let g = 5; // 4 (post-decrement), 3 (pre-decrement)

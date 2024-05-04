@@ -39,9 +39,9 @@ console.log(`${fahrenheitTemperature} Fahrenheit in Celsius: ${fahrenheitToCelsi
 
 // Q#5(ii) Celsius to Fahrenheit
 let celsiusTemperature: number = 32;
-let celsiusToFahrenheit : number = (9 / 5 * fahrenheitTemperature) + 32;
+let celsiusToFahrenheit : number = (9 / 5 * celsiusTemperature) + 32;
 // BODMAS is an acronym for Brackets, Orders or Exponents, Division, Multiplication, Addition, Subtraction.
-console.log(`${celsiusTemperature} Fahrenheit in Celsius: ${celsiusToFahrenheit}`);
+console.log(`${celsiusTemperature} Celsius in Fahrenheit: ${celsiusToFahrenheit}`);
 
 /* Q#6
 Convert a given number of seconds into minutes and seconds using variables. */
