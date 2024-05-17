@@ -1,34 +1,42 @@
 "use strict";
-var stuRollNo = [1, 2, 3, 4, 5]; // index 0,1,2,3,4
-console.log(stuRollNo[3]);
-var stuName = ["aroona", "bilal", "amina", "umer"]; // index 0,1,2,3
-console.log(stuName[2]);
-// how to check whether an element is present in an array or not?
-if (stuName.includes("amina")) {
-    console.log("Last Child!");
+// write a program using function to add two numbers 
+function sum(num1, num2) {
+    console.log("result=", num1 + num2); // function body, function defination
 }
-/* arrays are mutable.
-This means you can modify the elements present in an array after it's created.
-You can change existing elements, add new elements, or remove elements from the array. */
-stuRollNo[4] = 0;
-console.log(stuRollNo[4]);
-// built-in array functions 
-let builtFunc = ["one", "two", "three", "four"];
-builtFunc.push("five"); // Appends new elements to the end of an array, and returns the new length of the array.
-console.log(builtFunc);
-builtFunc.pop(); //Removes the last element from an array and returns it. 
-console.log(builtFunc);
-builtFunc.shift(); // Removes the first element from an array and returns it. 
-console.log(builtFunc);
-builtFunc.unshift("zero"); // Inserts new elements at the start of an array, and returns the new length of the array.
-console.log(builtFunc);
-builtFunc.splice(1, 0, "one"); // Removes elements from an array and, if necessary, inserts new elements in their place, 
-console.log(builtFunc);
-builtFunc.splice(5, 0, "five"); // splice acting as push
-console.log(builtFunc);
-builtFunc.splice(5, 1); // splice acting as pop
-console.log(builtFunc);
-builtFunc.splice(0, 1); // splice acting as shift
-console.log(builtFunc);
-builtFunc.splice(0, 0, "undefined"); // splice acting as unshift
-console.log(builtFunc);
+sum(20, 19); // call, argument
+// write a program using function to add two numbers and add number 50 in result after performing calculations 
+function sumNum(num1, num2) {
+    var output = num1 + num2;
+    return output;
+}
+var addOutput = sumNum(20, 19);
+addOutput += 50;
+console.log("result=", addOutput);
+/* write a program using functions to convert the temperature
+from celsius to fahrenheit */
+function tempConvert(num) {
+    var fahrenheit = num * (9 / 5) + 32;
+    console.log(`Temperature in Fahrenheit will be ${fahrenheit}`);
+}
+tempConvert(32);
+// write a prgram using function that calculates the percentage.
+function calPercentage(obtained_marks, total_marks) {
+    var percentage_marks = (obtained_marks / total_marks) * 100;
+    console.log(`Marks in Percentage will be ${percentage_marks}%`);
+}
+calPercentage(67, 100);
+// arrow function, anonymous function
+//  var million = (num1: number, num2: number):number => {
+//     return num1+num2
+//  }
+// curly brackets use ki jati hai lines of code ka block bnane ke liye, lqn ek line ka kya block bnana iz liye nahi lgate for single statement
+var million = (num1, num2) => num1 + num2;
+var sumMillion = million(2, 5);
+console.log(sumMillion += 3);
+var sumArrow = (num1, num2) => {
+    var result = num1 + num2;
+    return result;
+};
+var updateSum = sumArrow(40, 40);
+console.log(typeof sumArrow);
+console.log(`sum is: ${updateSum}`);

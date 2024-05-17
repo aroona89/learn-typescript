@@ -48,6 +48,3 @@ console.log(typeof sumArrow);
 console.log(`sum is: ${updateSum}`);
 
 
-
-
-
