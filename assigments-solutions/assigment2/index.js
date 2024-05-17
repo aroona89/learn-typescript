@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* Q#1
 Using conditional statements, check if the number is: Even or Odd. */
 let numberEvenOdd = 89;
-if (numberEvenOdd % 2 === 0) {
+if (numberEvenOdd % 2 == 0) {
     console.log(`${numberEvenOdd} is Even.`);
 }
 else {
@@ -12,13 +12,13 @@ else {
 /* Q#2
 Using conditional statements, check if the number is: Positive, Negative, or Zero. */
 let numberPositiveNegative = -89;
-if (numberEvenOdd > 0) {
+if (numberPositiveNegative > 0) {
     console.log(`${numberPositiveNegative} is Positive.`);
 }
 else if (numberPositiveNegative < 0) {
     console.log(`${numberPositiveNegative} is Negative.`);
 }
-else if (numberPositiveNegative === 0) {
+else if (numberPositiveNegative = 0) {
     console.log(`${numberPositiveNegative} is Zero.`);
 }
 /* Q#3
@@ -77,44 +77,26 @@ else {
 }
 /* Q#6
 Enter a month (as a number between 1 and 12). Print the number of days in that month. Assume a non-leap year. */
-let month = 9;
+let month = "sep";
 // Method 1
 switch (month) {
-    case 1:
-        console.log("January has 31 Days.");
+    case "jan":
+    case "mar":
+    case "may":
+    case "jul":
+    case "aug":
+    case "oct":
+    case "dec":
+        console.log(`${month} has 31 Days.`);
         break;
-    case 2:
-        console.log("February has 28 Days.");
+    case "feb":
+        console.log(`${month} has 28 Days.`);
         break;
-    case 3:
-        console.log("March has 31 Days.");
-        break;
-    case 4:
-        console.log("April has 30 Days.");
-        break;
-    case 5:
-        console.log("May has 31 Days.");
-        break;
-    case 6:
-        console.log("June has 30 Days.");
-        break;
-    case 7:
-        console.log("july has 31 Days.");
-        break;
-    case 8:
-        console.log("August has 31 Days.");
-        break;
-    case 9:
-        console.log("September has 30 Days.");
-        break;
-    case 10:
-        console.log("October has 31 Days.");
-        break;
-    case 11:
-        console.log("November has 30 Days.");
-        break;
-    case 12:
-        console.log("December has 31 Days.");
+    case "apr":
+    case "jun":
+    case "sep":
+    case "nov":
+        console.log(`${month} has 30 Days.`);
         break;
     default:
         console.log("Enter Valid Month!");
@@ -140,10 +122,3 @@ if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
 else {
     console.log(`${year} is not a Leap Year.`);
 }
-
-
-// = is used for assignment
-// === is used for comparison
-// The = operator is used for assigning a value to a variable.
-// Equality Operator (==): This operator compares two values but doesn’t consider their data types.
-// Strict Equality Operator (===): This operator compares two values for equality, and it considers their data types.

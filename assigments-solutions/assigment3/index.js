@@ -85,7 +85,7 @@ const checkPositiveNegative = (numberPositiveNegative) => {
     else if (numberPositiveNegative < 0) {
         console.log(`${numberPositiveNegative} is Negative.`);
     }
-    else if (numberPositiveNegative = 0) {
+    else if (numberPositiveNegative === 0) {
         console.log(`${numberPositiveNegative} is Zero.`);
     }
 };
@@ -154,40 +154,22 @@ Enter a month (as a number between 1 and 12). Print the number of days in that m
 const daysInMonth = (month) => {
     switch (month) {
         case 1:
-            console.log("January has 31 Days.");
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            console.log("It has 31 Days.");
             break;
         case 2:
-            console.log("February has 28 Days.");
-            break;
-        case 3:
-            console.log("March has 31 Days.");
+            console.log("It has 28 Days.");
             break;
         case 4:
-            console.log("April has 30 Days.");
-            break;
-        case 5:
-            console.log("May has 31 Days.");
-            break;
         case 6:
-            console.log("June has 30 Days.");
-            break;
-        case 7:
-            console.log("july has 31 Days.");
-            break;
-        case 8:
-            console.log("August has 31 Days.");
-            break;
         case 9:
-            console.log("September has 30 Days.");
-            break;
-        case 10:
-            console.log("October has 31 Days.");
-            break;
         case 11:
-            console.log("November has 30 Days.");
-            break;
-        case 12:
-            console.log("December has 31 Days.");
+            console.log("It has 30 Days.");
             break;
         default:
             console.log("Enter Valid Month!");
