@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* Q#1
 Using conditional statements, check if the number is: Even or Odd. */
 let numberEvenOdd = 89;
-if (numberEvenOdd % 2 == 0) {
+if (numberEvenOdd % 2 === 0) {
     console.log(`${numberEvenOdd} is Even.`);
 }
 else {
@@ -18,7 +18,7 @@ if (numberEvenOdd > 0) {
 else if (numberPositiveNegative < 0) {
     console.log(`${numberPositiveNegative} is Negative.`);
 }
-else if (numberPositiveNegative = 0) {
+else if (numberPositiveNegative === 0) {
     console.log(`${numberPositiveNegative} is Zero.`);
 }
 /* Q#3
@@ -140,3 +140,10 @@ if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
 else {
     console.log(`${year} is not a Leap Year.`);
 }
+
+
+// = is used for assignment
+// === is used for comparison
+// The = operator is used for assigning a value to a variable.
+// Equality Operator (==): This operator compares two values but doesn’t consider their data types.
+// Strict Equality Operator (===): This operator compares two values for equality, and it considers their data types.

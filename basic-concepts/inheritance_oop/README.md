@@ -1,4 +1,4 @@
-# Inheritence
+# programming Inheritance
 
 1. the extend keyword is used to create a new class that is a subclass of an existing class. It is used to define a new class that inherits the properties and behavior of an existing class.
 
@@ -10,6 +10,7 @@ provides a specific implementation for a method that is already defined in its s
 The subclass method has the same name, parameters, and return type as the superclass method, 
 but it can have a different implementation. it allows you to redefine the behavior of inherited methods, 
 particularly useful when a child class needs to specialize or modify the functionality provided by a parent class.
+4. Multiple Inheritance
 
 
 

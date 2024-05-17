@@ -104,7 +104,7 @@ const checkPositiveNegative = (numberPositiveNegative: number) => {
         console.log(`${numberPositiveNegative} is Positive.`);
     } else if (numberPositiveNegative < 0) {
         console.log(`${numberPositiveNegative} is Negative.`);  
-    } else if (numberPositiveNegative === 0){
+    } else if (numberPositiveNegative = 0){
         console.log(`${numberPositiveNegative} is Zero.`);
     }
 };
