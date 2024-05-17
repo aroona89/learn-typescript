@@ -20,11 +20,11 @@ function tempConvert(num) {
 }
 tempConvert(32);
 // write a prgram using function that calculates the percentage.
-function calPercentage(obtained_marks, total_marks) {
+function calPercentageWithParameters(obtained_marks, total_marks) {
     var percentage_marks = (obtained_marks / total_marks) * 100;
     console.log(`Marks in Percentage will be ${percentage_marks}%`);
 }
-calPercentage(67, 100);
+calPercentageWithParameters(67, 100);
 // arrow function, anonymous function
 //  var million = (num1: number, num2: number):number => {
 //     return num1+num2
