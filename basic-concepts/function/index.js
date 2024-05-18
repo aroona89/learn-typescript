@@ -1,11 +1,13 @@
 "use strict";
-// write a program using function to add two numbers 
+// write a program using function to add two numbers
 function sum(num1, num2) {
+    // reusability, comma seperated parameter
     console.log("result=", num1 + num2); // function body, function defination
 }
 sum(20, 19); // call, argument
-// write a program using function to add two numbers and add number 50 in result after performing calculations 
+// write a program using function to add two numbers and add number 50 in result after performing calculations
 function sumNum(num1, num2) {
+    // reusability, comma seperated parameter, define datatype of return by :number
     var output = num1 + num2;
     return output;
 }
@@ -32,7 +34,7 @@ calPercentageWithParameters(67, 100);
 // curly brackets use ki jati hai lines of code ka block bnane ke liye, lqn ek line ka kya block bnana iz liye nahi lgate for single statement
 var million = (num1, num2) => num1 + num2;
 var sumMillion = million(2, 5);
-console.log(sumMillion += 3);
+console.log((sumMillion += 3));
 var sumArrow = (num1, num2) => {
     var result = num1 + num2;
     return result;
@@ -40,3 +42,48 @@ var sumArrow = (num1, num2) => {
 var updateSum = sumArrow(40, 40);
 console.log(typeof sumArrow);
 console.log(`sum is: ${updateSum}`);
+// function synatx with return data type
+function testing() {
+    return "hello world!";
+}
+console.log(testing());
+// data type of a function which don't return anything
+function dontreturn() {
+    console.log("hello world!");
+}
+dontreturn();
+// Arrow Function
+const arrFunc = () => {
+    console.log("Arrow Function!");
+};
+arrFunc();
+// Arrow Function with parameters
+const arrFuncWithParameters = (name) => {
+    console.log("name:", name);
+};
+arrFuncWithParameters("aroona");
+// Arrow Function with rtuen type
+const arrFuncWithReturnType = () => {
+    return "arrow function with return type!";
+};
+console.log(arrFuncWithReturnType());
+// Lambda functions i.e one-liner functions
+const lambdaFunc = (name) => `Hello ${name}`;
+console.log(lambdaFunc("aroona"));
+const sumFunc = (num1, num2) => num1 + num2;
+console.log(sumFunc(3, 5));
+// optional parameter
+const optionalParameter = (firstName, lastName) => {
+    if (lastName) {
+        console.log("Last Name exists!");
+    }
+    else {
+        console.log("Last Name doest not exists!");
+    }
+};
+optionalParameter("aroona");
+optionalParameter("aroona", "ali");
+// default parameters
+const defaultParameter = (firstName, lastName = "akbar") => firstName + " " + lastName;
+console.log(defaultParameter("aroona"));
+console.log(defaultParameter("aroona", "ali"));
