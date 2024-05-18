@@ -116,7 +116,7 @@ checkDivisible(89);
   ---If no, print "Please obtain a valid ID to vote." */
 const eligibleToVote = (userAge, userNationality) => {
     if (userAge >= 18) {
-        if (userNationality == "Pakistani") {
+        if (userNationality.trim().toLowerCase() == "pakistani") {
             console.log("You are eligible to vote.");
         }
         else {
@@ -127,7 +127,7 @@ const eligibleToVote = (userAge, userNationality) => {
         console.log("A person, less than 18, is NOT ELIGIBLE to vote.");
     }
 };
-eligibleToVote(23, "Pakistani");
+eligibleToVote(23, "   PakIstaNi   ");
 /* Q#5
 Write a program that takes the age of a person as input and determines whether they are a child (0-12 years),
 teenager (13-19 years), adult (20-59 years), or senior citizen (60 years and above) */
