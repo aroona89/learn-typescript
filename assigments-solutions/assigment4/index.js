@@ -26,8 +26,8 @@ Print the cart's contents after each operation */
 // shoppingCart(arr);
 const cart = [];
 // Function to add items to the cart
-function addItem(item) {
-    cart.splice(cart.length, 0, { item, quantity: 1 }); // Add item to the end of the cart
+function addItem(item, quantity) {
+    cart.splice(cart.length, 0, { item, quantity }); // insert item at the end of the cart
     console.log(`Added ${item} to the cart.`);
     printCart();
 }
@@ -58,11 +58,11 @@ function updateItem(item, newItem) {
 // Function to print the cart's contents
 function printCart() {
     console.log(`Cart contents:`);
-    cart.forEach((cartItem) => console.log(`${cartItem.quantity} x ${cartItem.item}\n`));
+    cart.forEach((cartItem) => console.log(`${cartItem.quantity} x ${cartItem.item}`));
 }
 // Test the functions
-addItem("Apple");
-addItem("Banana");
+addItem("Apple", 5);
+addItem("Banana", 12);
 removeItem("Apple");
 updateItem("Banana", "Orange");
 printCart();
