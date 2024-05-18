@@ -25,6 +25,8 @@ Print the cart's contents after each operation */
 // let arr = ["apple", "milk", "cold drink" ,"bread", "egg"]
 // shoppingCart(arr);
 
+// The cart variable is declared as an array of objects, 
+// where each object has two properties: item (a string) and quantity (a number).
 const cart: { item: string; quantity: number }[] = [];
 
 // Function to add items to the cart
@@ -51,16 +53,6 @@ function removeItem(item: string, quantity: number) {
     }
     printCart();
 }
-// function removeItem(item: string) {
-//   const index = cart.findIndex((cartItem) => cartItem.item === item);
-// }  if (index !== -1) {
-//     cart.splice(index, 1); // Remove the item from the cart
-//     console.log(`Removed ${item} from the cart.`);
-//   } else {
-//     console.log(`Item not found in the cart.`);
-  
-//   printCart();
-// }
 
 // Function to update items in the cart
 function updateItem(item: string, newItem: string) {
