@@ -28,21 +28,37 @@ const cart = [];
 // Function to add items to the cart
 function addItem(item, quantity) {
     cart.splice(cart.length, 0, { item, quantity }); // insert item at the end of the cart
-    console.log(`Added ${item} to the cart.`);
+    console.log(`Added ${quantity} ${item} to the cart.`);
     printCart();
 }
 // Function to remove items from the cart
-function removeItem(item) {
+function removeItem(item, quantity) {
     const index = cart.findIndex((cartItem) => cartItem.item === item);
     if (index !== -1) {
-        cart.splice(index, 1); // Remove the item from the cart
-        console.log(`Removed ${item} from the cart.`);
+        const cartItem = cart[index];
+        if (cartItem.quantity <= quantity) {
+            cart.splice(index, 1); // Remove the item completely
+            console.log(`removed ${quantity} ${item} from the cart.`);
+        }
+        else {
+            cartItem.quantity -= quantity; // Reduce the quantity
+            console.log(`removed ${quantity} ${item} from the cart.`);
+        }
     }
     else {
-        console.log(`Item not found in the cart.`);
+        console.log("inappropriate action!");
     }
     printCart();
 }
+// function removeItem(item: string) {
+//   const index = cart.findIndex((cartItem) => cartItem.item === item);
+// }  if (index !== -1) {
+//     cart.splice(index, 1); // Remove the item from the cart
+//     console.log(`Removed ${item} from the cart.`);
+//   } else {
+//     console.log(`Item not found in the cart.`);
+//   printCart();
+// }
 // Function to update items in the cart
 function updateItem(item, newItem) {
     const index = cart.findIndex((cartItem) => cartItem.item === item);
@@ -63,7 +79,7 @@ function printCart() {
 // Test the functions
 addItem("Apple", 5);
 addItem("Banana", 12);
-removeItem("Apple");
+removeItem("Apple", 3);
 updateItem("Banana", "Orange");
 printCart();
 // Q#3
