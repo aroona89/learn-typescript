@@ -190,3 +190,25 @@ let lenString: string = "aroona";
 let lenList: string[] = ["aroona", "akbar", "ali"];
 console.log(lenString.length); // it returns the number of characters in the string
 console.log(lenList.length); //  it returns the number of elements in the array
+
+// Loops
+let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let i = 0; // initialization
+while (i < arr.length) { // condition
+  console.log(arr[i]); // access element at specific index of an array
+  i++; // increment or decrement
+}
+
+console.log();
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i] + 10);
+}
+
+console.log();
+
+let k = 0;
+do {
+  console.log("Testing");
+  k++;
+} while (k < 0); // loop is terminated, because the condition is not satisfied.
