@@ -1,0 +1,12 @@
+{
+  "name": "assigment1",
+  "version": "1.0.0",
+  "description": "Assignment 1:\r  - Calculate your age based on the current year and your birth year.\r  - Write a program that calculates the area of a rectangle using length and width variables.\r  - Write a program that calculates the area of a circle.\r  - Write a program that calculates the area of the cube.\r  - Create a program that converts a temperature from Fahrenheit to Celsius and vice versa using a variable.\r  - Convert a given number of seconds into minutes and seconds using variables.\r  - Write a program that calculates the percentage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

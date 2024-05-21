@@ -143,10 +143,6 @@ const negativeNumber = (array: number[]) => {
 let negativeArray: number[] = [1, -5, 3, -9];
 negativeNumber(negativeArray);
 
-// method 2
-// let positiveIntArray: number[] = [1, -5, 3, -9]
-// console.log(positiveIntArray.filter(x => Math.abs(x) === x));
-
 // Q#7
 // Create a function that takes an array of numbers as parameter.
 // Use a while loop to calculate and return the sum of all the numbers in the array.

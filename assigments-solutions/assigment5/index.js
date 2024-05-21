@@ -24,8 +24,6 @@ Print the cart's contents after each operation */
 // }
 // let arr = ["apple", "milk", "cold drink" ,"bread", "egg"]
 // shoppingCart(arr);
-// The cart variable is declared as an array of objects, 
-// where each object has two properties: item (a string) and quantity (a number).
 const cart = [];
 // Function to add items to the cart
 function addItem(item, quantity) {
@@ -52,6 +50,15 @@ function removeItem(item, quantity) {
     }
     printCart();
 }
+// function removeItem(item: string) {
+//   const index = cart.findIndex((cartItem) => cartItem.item === item);
+// }  if (index !== -1) {
+//     cart.splice(index, 1); // Remove the item from the cart
+//     console.log(`Removed ${item} from the cart.`);
+//   } else {
+//     console.log(`Item not found in the cart.`);
+//   printCart();
+// }
 // Function to update items in the cart
 function updateItem(item, newItem) {
     const index = cart.findIndex((cartItem) => cartItem.item === item);
@@ -130,9 +137,6 @@ const negativeNumber = (array) => {
 };
 let negativeArray = [1, -5, 3, -9];
 negativeNumber(negativeArray);
-// method 2
-// let positiveIntArray: number[] = [1, -5, 3, -9]
-// console.log(positiveIntArray.filter(x => Math.abs(x) === x));
 // Q#7
 // Create a function that takes an array of numbers as parameter.
 // Use a while loop to calculate and return the sum of all the numbers in the array.
