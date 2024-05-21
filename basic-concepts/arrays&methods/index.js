@@ -123,8 +123,8 @@ myFunction('a', 'b', 'c', 'd', 'e', 'f');
 let newArr = ["Abu Hurairah", "Naveed", "Ali", "Adnan", "Rauf"];
 let returnedArr = newArr.splice(0, 1); // ["Naveed", "Ali", "Adnan", "Rauf"];
 let returnedVal = newArr.pop(); // ["Naveed", "Ali", "Adnan"];
-console.log("🚀 ~ returnedVal:", returnedVal);
-console.log("🚀 ~ returnedArr:", returnedArr);
+console.log("🚀 returnedVal:", returnedVal);
+console.log("🚀 returnedArr:", returnedArr);
 // Accessing Elements
 // arr[index]: Access an element at a specific index.
 // arr[index] = value: Assign a new value to an element at a specific index. 
@@ -132,7 +132,7 @@ console.log("🚀 ~ returnedArr:", returnedArr);
 newArr[1] = "Rauf";
 //  Searching Arrays
 let index = newArr.lastIndexOf("Rauf"); // Returns the index of the last occurrence of a specified value in an array, or -1 if it is not present.
-console.log("🚀 ~ index:", index);
+console.log("🚀 index:", index);
 console.log(newArr);
 // Loops
 let nums1 = [1, 3, 5, 7, 9, 11, 13];
@@ -154,3 +154,45 @@ console.log(totalSum);
 //   i++;
 // }
 // console.log(result); // [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+// ---------------------------------
+// slice 
+const addValueInArray = (arr, index, value) => {
+    let newArr = arr.slice(0); // creates a shallow copy of the original array
+    newArr.splice(index, 0, value); // insert new element in array
+    return newArr;
+};
+const returnedValue = addValueInArray(["Aroona", "amina"], 1, "bilal");
+console.log("🚀 returnedValue:", returnedValue);
+// ---------------------------------
+let myName = "Aroona Ali";
+console.log(myName[0]); // returns the first character of the string
+console.log(myName.slice(0)); // returns a substring starting from index 0 to the end of the string
+// ---------------------------------
+// Functions as first-class citizens & Callback functions
+const addTwoValues = (num1, num2) => {
+    return num1 + num2;
+};
+// func: (num1: number, num2: number) => number,
+// func is the name of the parameter.
+// (num: number, num5: number) defines the parameters of the func function, which are num1 and num2, both of type number.
+// => number indicates that the func function returns a value of type number.
+// withMultiply: number
+// withMultiply is the name of the parameter.
+// number is the type of the parameter.
+const functionAsParam = (func, withMultiply) => {
+    return func(20, 30) * withMultiply; // func (which is actually addTwoValues) is executed by functionAsParam, making it a callback function.
+};
+const ans = functionAsParam(addTwoValues, 10); // addTwoValues is passed as an argument to functionAsParam, demonstrating that functions can be treated as values.
+console.log("🚀 product:", ans);
+// ---------------------------------
+const returnAValue = (val) => {
+    return val;
+};
+const concatString = (returnAValue, // first parameter
+concat // second paarameter
+) => {
+    let returnedValue = returnAValue("Testing"); // Callback function
+    console.log("🚀 concatinaion:", returnedValue + concat);
+};
+concatString(returnAValue, " my program"); // Functions as first-class citizens
+// ---------------------------------

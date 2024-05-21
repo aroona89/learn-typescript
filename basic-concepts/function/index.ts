@@ -102,3 +102,129 @@ optionalParameter("aroona", "ali");
 const defaultParameter = (firstName: string, lastName: string = "akbar") => firstName + " " + lastName;
 console.log(defaultParameter("aroona"));
 console.log(defaultParameter("aroona", "ali"));
+
+
+// ---------------------------
+// Loops
+// let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let i = 0;
+// while (i < arr.length) {
+//   console.log(arr[i]);
+//   i++;
+// }
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i] + 10);
+// }
+
+// let k = 0;
+// do {
+//   console.log("Testing");
+//   k++;
+// } while (k < 0);
+
+// ---------------------------------
+/* `Map`, `Filter`, and `Foreach`*/
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const arrayMethod = (abc: number, index: number) => {
+//   if ((index + abc) % 2 === 0) {
+//     return "Even";
+//   } else {
+//     return "Odd";
+//   }
+// };
+
+// let mapReturn = arr.map(arrayMethod);
+// console.log("🚀 ~ mapReturn:", mapReturn);
+
+// const names = ["Abu Hurairah", "Naveed", "Azhar", "Usman"];
+
+// const namesUpdate = (nam: string, index: number) => {
+//   if (nam === "Usman") {
+//     return "M. Usman";
+//   }
+//   return nam;
+// };
+
+// const newNames = names.map(namesUpdate);
+// console.log("🚀 ~ newNames:", newNames);
+
+// let nums = [-1, 2, 3, -5, 4, -9, 8, -8, -8, -8];
+
+// const customFunction = (val: number) => {
+//   if (val < 0) {
+//     console.log("Negative");
+//     return "Negative";
+//   } else {
+//     console.log("Positive");
+//     return "Positive";
+//   }
+// };
+
+// const data = nums.map(customFunction);
+// console.log("🚀 ~ data:", data);
+
+// const names = [
+//   "Ali",
+//   "Usman",
+//   "Azhar",
+//   "Naveed",
+//   "Abu Hurairah",
+//   "Ramzan",
+//   "Rizwan",
+//   "Sultan",
+//   "Mahad",
+//   "Zain",
+//   "Imran",
+// ];
+
+// const findName = (name: string) => {
+//   return name.length;
+// };
+
+// const namesLength = names.map((name: string) => {
+//   return name.length;
+// });
+// console.log("🚀 ~ namesLength:", namesLength);
+
+// const nums1 = [1, 2, 3, 4, 5, 6, 7];
+// const nums2 = [7, 6, 5, 4, 3, 2, 1];
+
+// const newArr = nums1.map((val: number, index: number) => {
+//     return val + nums2[index];
+// });
+// console.log("🚀 ~ newArr ~ newArr:", newArr);
+
+// ---------------------------------
+// Filter
+
+// const nums1 = [1, 2, 3, 4, 5, 6, 7];
+
+// const filteredArr = nums1.filter((val: number, index: number) => {
+//   if (index < 2) {
+//     return true;
+//   }
+// });
+// console.log("🚀 ~ filteredArr ~ filteredArr:", filteredArr);
+
+const names = [
+  "Ali",
+  "Usman",
+  "Azhar",
+  "Naveed",
+  "Abu Hurairah",
+  "Ramzan",
+  "Rizwan",
+  "Sultan",
+  "Mahad",
+  "Zain",
+  "Imran",
+];
+
+const filteredNames = names.filter((name: string) => {
+  if (name !== "Abu Hurairah") {
+    return true;
+  }
+});
+console.log("🚀 ~ filteredNames ~ filteredNames:", filteredNames);
