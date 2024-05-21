@@ -11,4 +11,7 @@
 ### filter() method
 - Returns the elements of an array that meet the condition specified in a callback function.
 ---
+### map vs filter
+- filter() callback returns a boolean value (true or false)
+- map() callback returns a value that replaces the original element
 ### forEach() method
