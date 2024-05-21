@@ -168,31 +168,95 @@ let myName = "Aroona Ali";
 console.log(myName[0]); // returns the first character of the string
 console.log(myName.slice(0)); // returns a substring starting from index 0 to the end of the string
 // ---------------------------------
-// Functions as first-class citizens & Callback functions
-const addTwoValues = (num1, num2) => {
-    return num1 + num2;
+// arrayMethod is defined to take two arguments: element (the element value) and index (the element's index in the array). 
+// When map() calls arrayMethod, it passes the current element's value and index as arguments, so element receives the 
+// element's value and index receives the element's index.
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const arrayMethod = (element, index) => {
+    if ((index + element) % 2 === 0) {
+        return "Even";
+    }
+    else {
+        return "Odd";
+    }
 };
-// func: (num1: number, num2: number) => number,
-// func is the name of the parameter.
-// (num: number, num5: number) defines the parameters of the func function, which are num1 and num2, both of type number.
-// => number indicates that the func function returns a value of type number.
-// withMultiply: number
-// withMultiply is the name of the parameter.
-// number is the type of the parameter.
-const functionAsParam = (func, withMultiply) => {
-    return func(20, 30) * withMultiply; // func (which is actually addTwoValues) is executed by functionAsParam, making it a callback function.
+let mapReturn = arr.map(arrayMethod); // map() Calls a defined callback function on each element of an array, and returns a new array with the transformed elements.
+console.log("🚀 mapReturn:", mapReturn);
+//----------------------
+const indiviuals = ["Aroona", "Umer", "Akbar", "bilal"];
+const namesUpdate = (name) => {
+    if (name === "Aroona") {
+        return "Ms. Aroona";
+    }
+    return "Mr." + " " + `${name}`;
 };
-const ans = functionAsParam(addTwoValues, 10); // addTwoValues is passed as an argument to functionAsParam, demonstrating that functions can be treated as values.
-console.log("🚀 product:", ans);
+const newNames = indiviuals.map(namesUpdate);
+console.log("🚀 newNames:", newNames);
+//----------------------
+let nums = [-1, 2, 3, -5, 4, -9, 8, -8, -8, -8];
+const customFunction = (value) => {
+    if (value < 0) {
+        return "Negative";
+    }
+    else {
+        return "Positive";
+    }
+};
+const data = nums.map(customFunction);
+console.log("🚀 data:", data);
+// map() calls customFunction on each element of nums.
+// customFunction checks if the element is less than 0 and returns "Negative" or "Positive" accordingly.
+// map() collects the returned values and creates a new array with the transformed elements.
+//----------------------
+const id = [
+    "Ali",
+    "Aroona",
+    "Bilal",
+    "Umer",
+    "Amina",
+    "Akbar"
+];
+// const findName = (name: string) => {
+//   return name.length;
+// };
+// const nameLengthArray = id.map(findName);
+// console.log("🚀 namesLength:", nameLengthArray)
+const namesLength = id.map((name) => name.length);
+console.log("🚀 namesLength:", namesLength);
+// When using arrow functions with a single expression, the return is implicit, meaning you don't need to explicitly use the return keyword.
+// id.map((name: string) => name.length) is equivalent to:
+// id.map((name: string) => {
+//   return name.length;
+// })
+//---------------------
+const num1 = [1, 2, 3, 4, 5, 6, 7];
+const num2 = [7, 6, 5, 4, 3, 2, 1];
+const sumArray = num1.map((value, index) => {
+    return value + num2[index];
+});
+console.log("🚀 modified array:", sumArray);
 // ---------------------------------
-const returnAValue = (val) => {
-    return val;
-};
-const concatString = (returnAValue, // first parameter
-concat // second paarameter
-) => {
-    let returnedValue = returnAValue("Testing"); // Callback function
-    console.log("🚀 concatinaion:", returnedValue + concat);
-};
-concatString(returnAValue, " my program"); // Functions as first-class citizens
-// ---------------------------------
+// Filter
+const numArray = [1, 2, 3, 4, 5, 6, 7];
+//  in order to access the index of elements in an array, you need to include the element (value) in 
+// the callback function parameters, even if you're not using it in the condition.
+const filteredArr = numArray.filter((value, index) => {
+    if (index < 5) {
+        return true; // Returns the elements of an array that meet the condition specified in a callback function.
+    }
+});
+console.log("🚀 filteredArray:", filteredArr);
+//--------------------
+const breakfast = [
+    "cherry",
+    "bread",
+    "egg",
+    "milk"
+];
+const filteredNames = breakfast.filter((value) => {
+    if (value !== "cold drink") {
+        return true;
+    }
+});
+console.log("🚀 filteredNames:", filteredNames);
+//---------------------

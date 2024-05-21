@@ -191,107 +191,109 @@ console.log(myName[0]); // returns the first character of the string
 console.log(myName.slice(0)); // returns a substring starting from index 0 to the end of the string
 // ---------------------------------
 
-/* `Map`, `Filter`, and `Foreach`*/
-// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// arrayMethod is defined to take two arguments: element (the element value) and index (the element's index in the array). 
+// When map() calls arrayMethod, it passes the current element's value and index as arguments, so element receives the 
+// element's value and index receives the element's index.
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const arrayMethod = (element: number, index: number) => {
+  if ((index + element) % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+};
+let mapReturn = arr.map(arrayMethod); // map() Calls a defined callback function on each element of an array, and returns a new array with the transformed elements.
+console.log("🚀 mapReturn:", mapReturn);
 
-// const arrayMethod = (abc: number, index: number) => {
-//   if ((index + abc) % 2 === 0) {
-//     return "Even";
-//   } else {
-//     return "Odd";
-//   }
-// };
+//----------------------
+const indiviuals = ["Aroona", "Umer", "Akbar", "bilal"];
+const namesUpdate = (name: string) => {
+  if (name === "Aroona") {
+    return "Ms. Aroona";
+  }
+  return "Mr."+ " " + `${name}`;
+};
+const newNames = indiviuals.map(namesUpdate);
+console.log("🚀 newNames:", newNames);
+//----------------------
 
-// let mapReturn = arr.map(arrayMethod);
-// console.log("🚀 ~ mapReturn:", mapReturn);
+let nums = [-1, 2, 3, -5, 4, -9, 8, -8, -8, -8];
+const customFunction = (value: number) => {
+  if (value < 0) {
+    return "Negative";
+  } else {
+    return "Positive";
+  }
+};
+const data = nums.map(customFunction);
+console.log("🚀 data:", data);
 
-// const names = ["Abu Hurairah", "Naveed", "Azhar", "Usman"];
+// map() calls customFunction on each element of nums.
+// customFunction checks if the element is less than 0 and returns "Negative" or "Positive" accordingly.
+// map() collects the returned values and creates a new array with the transformed elements.
 
-// const namesUpdate = (nam: string, index: number) => {
-//   if (nam === "Usman") {
-//     return "M. Usman";
-//   }
-//   return nam;
-// };
+//----------------------
 
-// const newNames = names.map(namesUpdate);
-// console.log("🚀 ~ newNames:", newNames);
-
-// let nums = [-1, 2, 3, -5, 4, -9, 8, -8, -8, -8];
-
-// const customFunction = (val: number) => {
-//   if (val < 0) {
-//     console.log("Negative");
-//     return "Negative";
-//   } else {
-//     console.log("Positive");
-//     return "Positive";
-//   }
-// };
-
-// const data = nums.map(customFunction);
-// console.log("🚀 ~ data:", data);
-
-// const names = [
-//   "Ali",
-//   "Usman",
-//   "Azhar",
-//   "Naveed",
-//   "Abu Hurairah",
-//   "Ramzan",
-//   "Rizwan",
-//   "Sultan",
-//   "Mahad",
-//   "Zain",
-//   "Imran",
-// ];
-
+const id = [
+  "Ali",
+  "Aroona",
+  "Bilal",
+  "Umer",
+  "Amina",
+  "Akbar"
+];
 // const findName = (name: string) => {
 //   return name.length;
 // };
+// const nameLengthArray = id.map(findName);
+// console.log("🚀 namesLength:", nameLengthArray)
 
-// const namesLength = names.map((name: string) => {
+const namesLength = id.map((name: string) => name.length);
+console.log("🚀 namesLength:", namesLength);
+
+// When using arrow functions with a single expression, the return is implicit, meaning you don't need to explicitly use the return keyword.
+// id.map((name: string) => name.length) is equivalent to:
+// id.map((name: string) => {
 //   return name.length;
-// });
-// console.log("🚀 ~ namesLength:", namesLength);
+// })
 
-// const nums1 = [1, 2, 3, 4, 5, 6, 7];
-// const nums2 = [7, 6, 5, 4, 3, 2, 1];
+//---------------------
 
-// const newArr = nums1.map((val: number, index: number) => {
-//     return val + nums2[index];
-// });
-// console.log("🚀 ~ newArr ~ newArr:", newArr);
+const num1 = [1, 2, 3, 4, 5, 6, 7];
+const num2 = [7, 6, 5, 4, 3, 2, 1];
+
+const sumArray = num1.map((value: number, index: number) => {
+    return value + num2[index];
+});
+console.log("🚀 modified array:", sumArray);
 
 // ---------------------------------
 // Filter
 
-// const nums1 = [1, 2, 3, 4, 5, 6, 7];
+const numArray = [1, 2, 3, 4, 5, 6, 7];
 
-// const filteredArr = nums1.filter((val: number, index: number) => {
-//   if (index < 2) {
-//     return true;
-//   }
-// });
-// console.log("🚀 ~ filteredArr ~ filteredArr:", filteredArr);
+//  in order to access the index of elements in an array, you need to include the element (value) in 
+// the callback function parameters, even if you're not using it in the condition.
+const filteredArr = numArray.filter((value:number, index: number) => {
+  if (index < 5) {
+    return true; // Returns the elements of an array that meet the condition specified in a callback function.
+  }
+});
+console.log("🚀 filteredArray:", filteredArr);
 
-const identity = [
-  "Ali",
-  "Usman",
-  "Azhar",
-  "Naveed",
-  "Abu Hurairah",
-  "Ramzan",
-  "Rizwan",
-  "Sultan",
-  "Mahad",
-  "Zain",
-  "Imran",
+//--------------------
+
+const breakfast = [
+  "cherry",
+  "bread",
+  "egg",
+  "milk"
 ];
 
-const filteredNames = identity.filter((name: string) => {
-  if (name !== "Abu Hurairah") {
+const filteredNames = breakfast.filter((value: string) => {
+  if (value !== "cold drink") {
     return true;
   }
 });
-console.log("🚀 ~ filteredNames ~ filteredNames:", filteredNames);
+console.log("🚀 filteredNames:", filteredNames);
+//---------------------
