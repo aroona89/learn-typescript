@@ -50,3 +50,10 @@ to create a new array containing the doubled values of odd numbers. */
 const array = [3, 6, 9, 12, 15, 18];
 const doubleOfOddArray = array.filter(value => value % 2 !== 0).map(value => value + value);
 console.log(doubleOfOddArray);
+/* Q#7 Given an array of names ["Alice", "Bob", "Charlie", "David", "Emily"], use the forEach method
+to log each name with an exclamation mark at the end, e.g., "Alice!". */
+const names = ["Alice", "Bob", "Charlie", "David", "Emily"];
+const concatenateMark = (value) => {
+    console.log(value + "!");
+};
+names.forEach(concatenateMark);

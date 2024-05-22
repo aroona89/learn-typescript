@@ -15,3 +15,4 @@
 ### Note:
 - filter() callback returns a boolean value (true or false)
 - map() callback returns a value that replaces the original element
+- forEach() Returns undefined (no return value)
