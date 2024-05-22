@@ -103,6 +103,13 @@ const defaultParameter = (firstName: string, lastName: string = "akbar") => firs
 console.log(defaultParameter("aroona"));
 console.log(defaultParameter("aroona", "ali"));
 
+// rest parameters
+function printItems(...items: string[]) {
+  items.forEach(item => console.log(item));
+}
+
+printItems('apple', 'banana', 'cherry');
+
 // ---------------------------------
 // Functions as first-class citizens & Callback functions
 const addTwoValues = (num1: number, num2: number) => {

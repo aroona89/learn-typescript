@@ -1,6 +1,7 @@
 "use strict";
 // var stuRollNo: number[] = [1,2,3,4,5] // index 0,1,2,3,4
 // console.log(stuRollNo[3]);
+Object.defineProperty(exports, "__esModule", { value: true });
 // var stuName: string[] = ["aroona","bilal", "amina", "umer"] // index 0,1,2,3
 // console.log(stuName[2]);
 // // how to check whether an element is present in an array or not?

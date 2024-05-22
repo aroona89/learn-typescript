@@ -26,3 +26,7 @@
 - forEach is like a "do" operation (execute a task for each element)
 - map is like a "transform" operation (convert each element into something new)
 ---
+### Array object has several static methods:
+- These methods are called directly on the Array constructor itself, rather than on an instance of an array.
+---
+
