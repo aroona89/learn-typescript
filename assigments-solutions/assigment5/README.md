@@ -11,3 +11,7 @@
 - Given an array of numbers [3, 6, 9, 12, 15, 18], use the map and filter methods together to create a new array containing the doubled values of odd numbers.
 
 - Given an array of names ["Alice", "Bob", "Charlie", "David", "Emily"], use the forEach method to log each name with an exclamation mark at the end, e.g., "Alice!".
+
+### Note:
+- filter() callback returns a boolean value (true or false)
+- map() callback returns a value that replaces the original element
