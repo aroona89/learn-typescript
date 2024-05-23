@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // write a program using function to add two numbers
 function sum(num1, num2) {
     // reusability, comma seperated parameter
@@ -72,21 +73,6 @@ const lambdaFunc = (name) => `Hello ${name}`;
 console.log(lambdaFunc("aroona"));
 const sumFunc = (num1, num2) => num1 + num2;
 console.log(sumFunc(3, 5));
-// optional parameter
-const optionalParameter = (firstName, lastName) => {
-    if (lastName) {
-        console.log("Last Name exists!");
-    }
-    else {
-        console.log("Last Name doest not exists!");
-    }
-};
-optionalParameter("aroona");
-optionalParameter("aroona", "ali");
-// default parameters
-const defaultParameter = (firstName, lastName = "akbar") => firstName + " " + lastName;
-console.log(defaultParameter("aroona"));
-console.log(defaultParameter("aroona", "ali"));
 // ---------------------------------
 // Functions as first-class citizens & Callback functions
 const addTwoValues = (num1, num2) => {
